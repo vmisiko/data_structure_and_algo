@@ -8,13 +8,11 @@
 var twoSum = function (nums, target) {
     var hashMaps = {};
     for (var i = 0; i < nums.length; i++) {
-        hashMaps[nums[i]] = i;
-    }
-    for (var i = 0; i < nums.length; i++) {
         var diff = target - nums[i];
         if (diff in hashMaps) {
             return [i, hashMaps[diff]];
         }
+        hashMaps[nums[i]] = i;
     }
 };
 var nums = [2, 7, 11, 15];

@@ -15,16 +15,13 @@ const twoSum = (nums: number[], target: number) => {
     const hashMaps= {}
 
     for (let i=0; i < nums.length; i++ ) {
-        hashMaps[nums[i]] = i;
-    }
-
-
-    for (let i=0; i < nums.length; i++ ) {
         const diff = target- nums[i]
 
         if (diff in hashMaps) {
             return [i, hashMaps[diff]];
         }
+
+        hashMaps[nums[i]] = i;
     }
     
 }
