@@ -3,7 +3,7 @@
 ## How to run the tests 
 First transpile the code of each ts file to js using this command e.g
  ```
- tsc twoSum.ts
+ tsc --target es2017 twoSum.ts
  ```
 
  This 
